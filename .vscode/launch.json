@@ -1,0 +1,31 @@
+{
+  "configurations": [
+      {
+        "name": "Dev",
+        "request": "launch",
+        "type": "dart",
+        "program": "lib/main/main_dev.dart",
+        "args": [
+            "--flavor",
+            "dev",
+            // "--profile",
+            // "--multidex ",
+        ]
+    },
+    {
+        "name": "Prod",
+        "request": "launch",
+        "type": "dart",
+        "program": "lib/main/main_prod.dart",
+        "args": [
+            "--flavor",
+            "prod",
+        ]
+    }
+  ]
+}
+
+// fvm flutter build apk -t lib/main/main_dev.dart --flavor dev --release
+// fvm flutter build ios -t lib/main/main_dev.dart --flavor dev --release
+// fvm flutter build ipa -t lib/main/main_dev.dart --flavor dev --release
+// fvm flutter run -t lib/main/main_dev.dart --flavor dev
